@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>
+    CALCULATOR
+  </title>
+  <script type="text/javascript">
+  function clr(){
+    calc_form.txt.value="";
+  }
+  function backspace(){
+    calc_form.txt.value=calc_form.txt.value.slice(0,calc_form.txt.value.length-1)
+  }
+  function disp(x){
+    calc_form.txt.value=calc_form.txt.value+x;
+  }
+  </script>
+  <style type="text/css">
+    body{
+      background-color: pink;
+    }
+    .container{
+      width: 320px;
+      background-color: grey;
+      margin: 120 px auto;
+    }
+    .textbox{
+      width: 320px;
+      height: 60px;
+      text-align: right;
+      background-color: #ececec
+    }
+
+    .btn{
+      position: static;
+      width:50px;
+      height:40px;
+      margin-left:100 px;
+      margin-right:100 px;
+      margin-bottom:100 px;
+    }
+  </style>
+</head>
+<body>
+  <h1> Simple Calculator </h1>
+  <hr>
+  <div class="container">
+    <form name="calc_form">
+      <input type="text" class="textbox" name="txt" value=""><br>
+      <input class="btn" type="button" name="btn_clear" value="Clear" onClick="clr()">
+      <input class="btn" type="button" name="btn_backspace" value="Del" onClick="backspace()"><br>
+      <input class="btn" type="button" name="btn_9" value="9" onClick="disp(btn_9.value)">
+      <input class="btn" type="button" name="btn_8" value="8" onClick="disp(btn_8.value)">
+      <input class="btn" type="button" name="btn_7" value="7" onClick="disp(btn_7.value)">
+      <input class="btn" type="button" name="btn_divide" value="/" onClick="disp(btn_divide.value)"><br>
+      <input class="btn" type="button" name="btn_6" value="6" onClick="disp(btn_6.value)">
+      <input class="btn" type="button" name="btn_5" value="5" onClick="disp(btn_5.value)">
+      <input class="btn" type="button" name="btn_4" value="4" onClick="disp(btn_4.value)">
+      <input class="btn" type="button" name="btn_mul" value="*" onClick="disp(btn_mul.value)"><br>
+      <input class="btn" type="button" name="btn_3" value="3" onClick="disp(btn_3.value)">
+      <input class="btn" type="button" name="btn_2" value="2" onClick="disp(btn_2.value)">
+      <input class="btn" type="button" name="btn_1" value="1" onClick="disp(btn_1.value)">
+      <input class="btn" type="button" name="btn_add" value="+" onClick="disp(btn_add.value)"><br>
+      <input class="btn" type="button" name="btn_0" value="0" onClick="disp(btn_0.value)">
+      <input class="btn" type="button" name="btn_sub" value="-" onClick="disp(btn_sub.value)">
+      <input class="btn" type="button" name="btn_equalTo" value="=" onClick="txt.value=eval(txt.value)">
+    </form>
+  </div>
+</body>
+</html>
